@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <h1>Create a Post</h1>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Title*</label>
+        <input type="text" class="form-control" name="title" placeholder="Post Title">
+        <label for="">Post*</label>
+        <textarea class="form-control" name="text" id="" cols="30" rows="10" placeholder="Post Content"></textarea>
+        <br>
+        <button style="border-radius: 10px;
+        color: #fff;
+        background: #009DDC;
+        border: 2px solid transparent;
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: all ease 0.3s;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;" class="site-btn">Create Post!</button>
+    </form>
+
+</div>
+<br>
+{% endblock %}
