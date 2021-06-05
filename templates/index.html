@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!-- Hero section -->
+<section class="hero-section set-bg" data-setbg="{% static 'webuni/img/background.jpg'%}">
+  <div class="container">
+    <div class="hero-text text-white">
+      {% if request.user.is_authenticated %}
+      <h2 style="color: black; padding-top: 150px;">Welcome{% if request.user.profile.is_teacher == True %}
+         Teacher,
+        {% endif %} {{ request.user.username|capfirst }}
+
+       
+      </h2>
+      {% else %}
+      <!-- <h2>Excellence starts here!</h2> -->
+      {% endif %}
+      <!-- <p style="font-size: 120%; color: black; margin-top: 200px;">Webera is platform designed specifically for KLE TECHNOLOGICAL UNIVERSITY for students to have a wonderful learning experience in Web technology!</p> -->
+    </div>
+    <div style="padding-top: 100px;"class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <form method="post" action="{% url 'courses:course_courses' %}" class="intro-newslatter"> {% csrf_token %}
+          <input name="search" type="text" placeholder="Search the Course" style="border:2px solid black">
+          <button type="submit" style="border-radius: 10px;
+          color: #fff;
+          background: #009DDC;
+          border: 2px solid transparent;
+          display: inline-block;
+          padding: 15px 30px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          transition: all ease 0.3s;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;">Search Course</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero section end -->
+
+<!-- categories section -->
+<section class="categories-section spad">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="margin-top:20px" id="courses">Categories and Classes</h2>
+      <p>Lessons are divided into different categories according to their classes and level. You must first register and then attend the class to which you belong.</p>
+    </div>
+    <div class="row">
+      {% for cat in category %}
+      <!-- categorie -->
+      <div data-aos="zoom-in" class="col-lg-4 col-md-6">
+        <div class="categorie-item">
+          <div class="ci-thumb set-bg" data-setbg="{{ cat.image.url }}"></div>
+          <div class="ci-text">
+
+            <h5>{{cat.title|capfirst}}</h5>
+
+            <p>{{ cat.description|capfirst }}</p>
+            <span><a class="btn btn-success" href="/courses/{{ cat.id }}">Look at the subjects</a></span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- categories section end -->
+{% if request.user.is_authenticated %}
+{% else %}
+<section class="course-section spad">
+  <div class="container">
+    <div class="section-title mb-0">
+      <h2>Examples of courses</h2>
+      <p class="pb-3">These are some examples of concepts that students attend on our platform.</p>
+    </div>
+  </div>
+  <div class="course-warp">                                     
+    <div class="row course-items-area">
+      <!-- course -->
+      <div class="mix col-lg-3 col-md-4 col-sm-6 finance">
+        <div class="course-item">
+          <div class="course-thumb set-bg" data-setbg="{% static 'webuni/img/courses/4.jpg' %}">
+            <iframe width="100%" height="290" src="https://www.youtube.com/embed/EexyBwBG9dM?controls=0"  frameborder="0" controls allowfullscreen></iframe>  
+            
+          </div>
+          <div class="course-info">
+            <div class="course-text">
+              <h5>Static Pages</h5>
+              <p>Web Tech</p>
+              <div style="color:#009DDC" class="students">Easy</div>
+            </div>
+            <div class="course-author">
+              <div class="ca-pic set-bg" data-setbg="{% static 'webuni/img/authors/4.jpg' %}"></div>
+              <p>Clarke James <span style="color:#009DDC">Teacher</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- course -->
+      <div class="mix col-lg-3 col-md-4 col-sm-6 design">
+        <div class="course-item">
+          <div class="course-thumb set-bg" data-setbg="{% static 'webuni/img/courses/4.jpg' %}">
+            <iframe width="100%" height="290" src="https://www.youtube.com/embed/mNJ06S60B9k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="course-info">
+            <div class="course-text">
+              <h5>Top Javascript tricks</h5>
+              <p>Web Tech</p>
+              <div style="color:#009DDC" class="students">Medium</div>
+            </div>
+            <div class="course-author">
+              <div class="ca-pic set-bg" data-setbg="{% static 'webuni/img/authors/4.jpg' %}"></div>
+              <p>Clarke James <span style="color:#009DDC">Teacher</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- course -->
+      <div class="mix col-lg-3 col-md-4 col-sm-6 web">
+        <div class="course-item">
+          <div class="course-thumb set-bg" data-setbg="{% static 'webuni/img/courses/4.jpg' %}">
+            <iframe width="100%" height="290" src="https://www.youtube.com/embed/OTmQOjsl0eg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="course-info">
+            <div class="course-text">
+              <h5>Django Introduction</h5>
+              <p>Web Tech</p>
+              <div style="color:#009DDC" class="students">Easy</div>
+            </div>
+            <div class="course-author">
+              <div class="ca-pic set-bg" data-setbg="{% static 'webuni/img/authors/4.jpg' %}"></div>
+              <p>Clarke James <span style="color:#009DDC">Teacher</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- course -->
+      <div class="mix col-lg-3 col-md-4 col-sm-6 photo">
+        <div class="course-item">
+          <div class="course-thumb set-bg" data-setbg="{% static 'webuni/img/courses/4.jpg' %}">
+            <iframe width="100%" height="290" src="https://www.youtube.com/embed/5NER79OFmTY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="course-info">
+            <div class="course-text">
+              <h5>Mean Stack</h5>
+              <p>Web tech</p>
+              <div style="color:#009DDC" class="students">Easy</div>
+            </div>
+            <div class="course-author">
+              <div class="ca-pic set-bg" data-setbg="{% static 'webuni/img/authors/4.jpg' %}"></div>
+              <p>Clarke James <span style="color:#009DDC">Teacher</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- course section end -->
+
+{% if request.user.is_authenticated %}
+
+<!-- signup section -->
+{% if request.user.profile.is_teacher == True %}
+<div class="container">
+  <h1 class="text-center">Your account has teacher access</h1><br>
+  <p class="text-center">By having a teacher account you already have full access to this platform. You can perform more functions than the student's initial account. Some of these functions are:</p>
+
+  <div data-aos="fade-right" class="row mt-4 mb-4 bg-light">
+    <div class="col-md-4 text-center">
+      <h3 style="padding-top: 70px;">You can create your own class</h3> 
+      <a style="border-radius: 10px;
+      color: #fff;
+      background: #009DDC;
+      border: 2px solid transparent;
+      display: inline-block;
+      padding: 10px 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all ease 0.3s;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;" href="{% url 'courses:create_class' %}" class="btn btn-outline-primary m-4">Create a class</a>
+    </div>
+    <div class="col-md-8">
+      <img class="img-fluid w-100" src="{% static 'webuni/img/categories/4.jpg' %}" alt="">
+    </div>
+  </div>
+
+  <div data-aos="fade-left" class="row mt-4 mb-4 bg-light">
+      <div class="col-md-8">
+        <img class="img-fluid w-100" src="{% static 'webuni/img/categories/2.jpg' %}" alt="">
+      </div>
+  
+    <div class="col-md-4 text-center">
+      <h3 style="padding-top: 70px;">You can create your own subjects</h3> 
+      <a style="border-radius: 10px;
+      color: #fff;
+      background: #009DDC;
+      border: 2px solid transparent;
+      display: inline-block;
+      padding: 10px 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all ease 0.3s;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;"href="{% url 'courses:create_subject' %}" class="btn btn-outline-primary m-4">Create Subject</a>
+  </div>
+</div>
+
+<div data-aos="fade-right" class="row mt-4 mb-4 bg-light">
+  <div class="col-md-4 text-center">
+    <h3 style="padding-top: 70px;">You can upload your own tutorials and videos.</h3> 
+    <a style="border-radius: 10px;
+    color: #fff;
+    background: #009DDC;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;"href="{% url 'courses:create_lesson' %}" class="btn btn-outline-primary m-4">Create lesson</a>
+  </div>
+  <div class="col-md-8">
+    <img class="img-fluid w-100" src="{% static 'webuni/img/categories/1.jpg' %}" alt="">
+  </div>
+</div>
+</div>
+
+{% else %}
+<section data-aos="zoom-out" class="signup-section spad">
+  <div class="signup-bg set-bg" data-setbg="{% static 'webuni/img/teacher.gif' %}"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="signup-warp">
+          <div class="section-title text-white text-left">
+            <h2>Register as a teacher</h2>
+            <p>To register as a teacher on the platform you must fill in the following fields and then you will have full access to upload courses and videos.</p>
+            
+          </div>
+          <!-- signup form -->
+          <form action="/request/" method="post" class="signup-form">{% csrf_token %}
+            <input type="text" placeholder="Your Name" name="name">
+            <input type="text" placeholder="Email" name="e-mail">
+            <input type="text" placeholder="Phone Number" name="phone">
+            <button style="border-radius: 10px;
+            color: #fff;
+            background: #009DDC;
+            border: 2px solid transparent;
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all ease 0.3s;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;"class="site-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endif %}
+<!-- signup section end -->
+{% else %}
+{% endif %}
+
+{% endblock content %}

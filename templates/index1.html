@@ -1,0 +1,675 @@
+{% extends 'base/base.html' %} {% load static %} {% block content %}
+<div class="row nav-row trans-menu">
+    <div class="container nav-container">
+        <div class="top-navbar">
+            <div class="pull-right">
+                <div class="top-nav-social pull-left">
+                    <a href="https://www.kletech.ac.in/"><i class="fa fa-globe"></i></a>
+                    <a href="https://twitter.com/kletechbvb?lang=en"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/kletechbvb/"><i class="fa fa-linkedin"></i></a>
+                </div>
+
+                <!--<div class="top-navbar-search pull-right">
+							<i class="fa fa-search"></i>
+							<input type = "text" placeholder = "Search"/>
+						</div>-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <nav id="weberaNavbar" class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#weberaNavbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="index.html">WEBERA</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="weberaNavbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-graduation-cap"></i>ACADEMICS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="academic.html"><i class="fa fa-certificate"></i>LEARN</a></li>
+                            <li><a href="academic.html"><i class="fa fa-search"></i>READ</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="events.html" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-calendar-check-o"></i>EVENTS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="events.html"><i class="fa fa-calendar"></i>WEB DEV EVENTS</a></li>
+                            <li><a href="event-single.html"><i class="fa fa-calendar-o"></i>EVENT SINGLE</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
+								class="fa fa-dashboard"></i>DASHBOARD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="accounts/login"><i class="fa fa-user"></i>TEACHER</a></li>
+                            <li><a href="accounts/login"><i class="fa fa-child"></i>STUDENT</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-file"></i>PAGES <b
+								class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gallery.html"><i class="fa fa-picture-o"></i>WEB DEV GALLERY</a></li>
+                            <li><a href="about.html"><i class="fa fa-info-circle"></i>ABOUT</a></li>
+                            <li><a href="contact.html"><i class="fa fa-phone-square"></i>CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div id="homeSlider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#homeSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#homeSlider" data-slide-to="1"></li>
+            <li data-target="#homeSlider" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="{% static 'img/slider/slide4.jpg' %}" alt="slide1">
+                <div class="carousel-caption">
+                    <h4><i class="fa fa-star-o"></i>KLE TECHNOLOGIAL UNIVERSITY PRESENTS<i class="fa fa-star-o"></i>
+                    </h4>
+                    <h2> WEBERA - DESIGN, INNOVATE AND CREATE</h2>
+                    <p> <strong> A Course to fuel your love for Web Development</strong> </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static 'img/slider/slide5.jpg' %}" alt="slide2">
+                <div class="carousel-caption">
+                    <h4><i class="fa fa-star-o"></i>LEARN FROM THE BEST<i class="fa fa-star-o"></i></h4>
+                    <h2>START CREATING BEAUTIFUL WEBSITES AND <span><i class="fa fa-line-chart"></i>GROW</span></h2>
+                    <p> Cherish learning current treding stacks with <strong>WEBERA</strong></p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/slider/slide6.jpg' %}" alt="slide2">
+                <div class="carousel-caption">
+                    <h4><i class="fa fa-star-o"></i>EXCEL THE ART<i class="fa fa-star-o"></i></h4>
+                    <h2><span><i class="fa fa-rocket"></i>BOOST</span> YOUR PERSONAL PORTFOLIO WITH AMAZING PROJECTS
+                    </h2>
+                    <p><strong>WEBERA</strong> will aim to provide Hand's on experience and practical learning </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Controls -->
+        <a class="left carousel-control" href="#homeSlider" role="button" data-slide="prev">
+            <span class="fa fa-arrow-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#homeSlider" role="button" data-slide="next">
+            <span class="fa fa-arrow-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- College Intro Section -->
+<div class="row principal-intro-row">
+    <div class="container">
+        <div class="col-sm-5">
+            <img id="MainImage" src="{% static 'img/test.jpg' %}" alt="Our Principal" />
+        </div>
+        <div class="col-sm-7 principal-intro">
+            <h6><i class="fa fa-star-o"></i><span> COLLEGE FORUM </span><i class="fa fa-star-o"></i></h6>
+            <h3>WEB TECHNOLOGIES</h3>
+            <p> KLE Technological University offers many amazing courses to wire up a students brain and develop a knack of problem solving. Web Technologies is one of them. Web Technologies is a course designed specifically to enhance and build web development skills and help students ideate and create beautiful websites on the go with the most trending tech stacks today. 
+            </p>
+            <p>Buckle up! and get ready for an exciting learning experience ahead.</p>
+            <h6 class="principal-name">To know more about the course click the below button.</h6>
+            <div>
+                <a href="#" class="know-more-btn"><i class="fa fa-paper-plane"></i>KNOW MORE</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Events Section -->
+
+<div class="row section-row evets-row">
+    <div class="container">
+        <div class="section-row-header-center">
+            <h6><i class="fa fa-star-o"></i>THINGS IN HAPPENING<i class="fa fa-star-o"></i></h6>
+            <h1>NEWS, BLOGS AND TRENDING</h1>
+            <p>Learn what's happening around the world and be a part of a global Web-Dev community</p>
+        </div>
+        <div class="col-sm-15">
+            <div class="event-tab-link-box">
+                <div class="pull-mid">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#1" data-toggle="tab"><i class="fa fa-graduation-cap"></i><span>News</span></a>
+                        </li>
+                        <li>
+                            <a href="#2" data-toggle="tab"><i class="fa fa-trophy"></i><span>Blogs</span></a>
+                        </li>
+                        <li>
+                            <a href="#3" data-toggle="tab"><i class="fa fa-rocket"></i><span>Trending</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <div class="col-md-8 left-event-items">
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                            </div>
+                            <h3>VISUAL STUDIO CODE</h3>
+                            <h6><i class="fa fa-map-marker"></i>By David Ramel</h6>
+                            <p>Microsoft's monthly update to its wildly popular open source, cross-platform Visual Studio Code editor has a new JavaScript debugger.Working with Node.js and Chrome, the debugger that has been in the works for months is now the default option in the June 2020 update, or VS Code 1.47.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static './img/VSCode.jpg' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="https://adtmag.com/articles/2020/07/15/vs-code-javascript-debugger.aspx#:~:text=Microsoft's%20monthly%20update%20to%20its,update%2C%20or%20VS%20Code%201.47.">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                            </div>
+                            <h3>MICROSOFT ACQUIRE NPM</h3>
+                            <h6><i class="fa fa-map-marker"></i>By John K Waters</h6>
+                            <p>Microsoft plans to acquire the popular JavaScript repository npm Inc. and integrate it with its GitHub collaborative software development platform, the company said this week. NPM, which originally stood for "Node Package Manager," was developed in 2009 as an open source project to help JavaScript developers share packaged modules of code. It comprises a command line client, also called npm, and an online database of public and paid-for private packages, called the npm Registry. The npm Registry is currently home to more than 1.3 million packages with 75 billion downloads a month.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static './img/GitHub.png' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="https://adtmag.com/articles/2020/03/19/microsoft-acquires-npm.aspx">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 right-event-items">
+                    <div class="event-item">
+                        <img src="{% static 'img/news/news-lg3.jpg' %}" alt="event" />
+                    </div>
+                    <div class="featured-event">
+                        <div class="event-date">
+                        </div>
+                        <h3>REACT NATIVE: UPGRADE AND DEBUG</h3>
+                        <h6><i class="fa fa-map-marker"></i>By David Ramel</h6>
+                        <p>The React Native Community recently conducted a survey via GitHub to ask mobile developers "What do you dislike about React Native?" and found that the two biggest complaints are upgrading and debugging. </p>
+                        <a href="https://adtmag.com/articles/2019/03/22/react-native-survey.aspx#:~:text=React%20Native%20Team%20Addressing%20Biggest%20Complaints%3A%20Upgrading%20and%20Debugging,-By%20David%20Ramel&text=The%20React%20Native%20Community%20recently,complaints%20are%20upgrading%20and%20debugging."><i class="fa fa-paper-plane"></i> KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="2">
+                <div class="col-md-8 left-event-items">
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                            </div>
+                            <h3> Circular Images with CSS</h3>
+                            <h6><i class="fa fa-map-marker"></i>By William Craig</h6>
+                            <p>Generally, the subject of landscape photos will — but not always — be located around the center of the composition. To give us the best chance of not cropping out the photo’s subject, we can horizontally center the img element in the wrapper div by nudging the img element to the left to compensate for the left-biased cropping.The main CSS property responsible for the circular shape is the border-radius property. Setting the radius of the corners to 50% of the width/height results in a circle.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static 'img/news/news-sms2.PNG' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="https://www.webfx.com/blog/web-design/circular-images-css/">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                                <p><span>2</span> MAY</p>
+                            </div>
+                            <h3>What is a redirect?</h3>
+                            <h6><i class="fa fa-map-marker"></i> By Matthew Gibbons </h6>
+                            <p>Put simply, a redirect is a line of code used to make browsers send users to a different URL than the one they were originally trying to visit. The new URL should contain similar information to the original, so it can fulfill a similar purpose.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static 'img/news/news-sms3.PNG' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 right-event-items">
+                    <div class="event-item">
+                        <img src="{% static 'img/news/news-lg3.jpg' %}" alt="event" />
+                    </div>
+                    <div class="featured-event">
+                        <div class="event-date">
+                            <p><span>20</span> JAN</p>
+                        </div>
+                        <h3>Domain Name Generators</h3>
+                        <h6><i class="fa fa-map-marker"></i>webresourcesdepot</h6>
+                        <p>Finding the perfect domain name for your new website is not as easy as it sounds. With over 348 million registered domain names across all top-level domains (TLDs) already in use worldwide, you’re going to need to put a little extra thought into what you name your website if you want to stand out.</p>
+                        <a href="https://webresourcesdepot.com/best-domain-name-generators/"><i class="fa fa-paper-plane"></i> KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="3">
+                <div class="col-md-8 left-event-items">
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                            </div>
+                            <h3> Developer Drive</h3>
+                            <h6><i class="fa fa-map-marker"></i>By Firehose Project</h6>
+                            <p>This is a perfect option if you’re just beginning your career in web development. By web developers, for web developers, Developer Drive offers the latest news in the world of web development. This includes opinion articles,
+                                tutorials, tips & tricks to start off on the right foot. From JavaScript to mobile development, Developer Drive has you covered.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static './img/DeveloperDrive.jpg' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="event-item">
+                        <div class="col-sm-7">
+                            <div class="event-date">
+                            </div>
+                            <h3> Simple Programmer</h3>
+                            <h6><i class="fa fa-map-marker"></i>By Firehose Project</h6>
+                            <p>While Simple Programmer was originally created by founder John Sonmez to distill what he learned as a web developer into understandable content, today it is focused on helping software developers, programmers and other IT professionals
+                                improve their careers and their lives. Simple Programmer puts a fun spin on videos, keeping you engaged with humor while providing valuable content. They’re constantly posting new articles – almost daily – so you’ll never
+                                be bored.</p>
+                        </div>
+                        <div class="col-sm-5 event-item-img">
+                            <div class="event-img">
+                                <img src="{% static './img/SimpleProgrammer.jpg' %}" alt="event" />
+                                <div class="event-detail-link">
+                                    <a href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 right-event-items">
+                    <div class="event-item">
+                        <img src="{% static 'img/news/news-lg3.jpg' %}" alt="event" />
+                    </div>
+                    <div class="featured-event">
+                        <div class="event-date">
+                        </div>
+                        <h3> CodeNewbie </h3>
+                        <h6><i class="fa fa-map-marker"></i>By Firehose Project</h6>
+                        <p>If you’re a code newbie looking for insight on all things web development, you’re in the right place. This site acts as a virtual community for anyone new to the coding world. CodeNewbie offers an open look into the lives of web
+                            developers and serves as a place for people to read about career advice while hearing stories from people on their coding journey through the site’s podcasts.</p>
+                        <a href="#"><i class="fa fa-paper-plane"></i> KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Teaacher section -->
+<div class="row section-row teacher-row">
+    <div class="container">
+        <div class="section-row-header-center">
+            <h6><i class="fa fa-star-o"></i>LEARN FROM THE BEST<i class="fa fa-star-o"></i></h6>
+            <h1>MEET OUR TEACHERS</h1>
+            <p>A good teacher can inspire hope, ignite the imagination, and instill a love of learning.</p>
+        </div>
+        <div class="owl-carousel" id="ourTeacher">
+            <div class="teacher-item">
+                <h5><i class="fa fa-code"></i>WEB TECHNOLOGIES</h5>
+                <div class="teacher-item-inner">
+                    <p class="teacher-desc">
+                        Prof. Neha is a Computer Science Professor who is inspiring and motivating students by providing a thorough understanding of a variety of web technology concepts.
+                    </p>
+                    <div class="col-xs-4 clear-padding teacher-img">
+                        <img src="{% static 'img/parent/Neha_Mam.png' %}" alt="teacher" />
+                    </div>
+                    <div class="col-xs-8 teacher-details">
+                        <p><strong>Prof. Neha T</strong></p>
+                        <p><i>MTech. in CS </i></p>
+                        <p>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="teacher-item">
+                <h5><i class="fa fa-code"></i>WEB TECHNOLOGIES</h5>
+                <div class="teacher-item-inner">
+                    <p class="teacher-desc">
+                        Prof. Soumya is a Computer Science Professor who is inspiring students to understand the basic and advance concepts of Web technology in most Interactive way.
+                    </p>
+                    <div class="col-xs-4 clear-padding teacher-img">
+                        <img src="{% static 'img/parent/Madura_Mam.png' %}" alt="teacher" />
+                    </div>
+                    <div class="col-xs-8 teacher-details">
+                        <p><strong>Prof. Soumya CV</strong></p>
+                        <p><i>MTech. in CS</i></p>
+                        <p>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="teacher-item">
+                <h5><i class="fa fa-code"></i>WEB TECHNOLOGIES</h5>
+                <div class="teacher-item-inner">
+                    <p class="teacher-desc">
+                        Prof. Mallikarjun is a Computer Science Professor who is adept at explaining complex concepts of web technology in an easy-to-understand manner.
+                    </p>
+                    <div class="col-xs-4 clear-padding teacher-img">
+                        <img src="{% static 'img/parent/Mallikarjun_Sir.png' %}" alt="teacher" />
+                    </div>
+                    <div class="col-xs-8 teacher-details">
+                        <p><strong>Prof. Mallikarjun Akki</strong></p>
+                        <p><i>MTech. in CS</i></p>
+                        <p>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- News Section -->
+<div class="row section-row">
+    <div class="container">
+        <div class="section-row-header-center">
+            <h6><i class="fa fa-star-o"></i>EXPLORE<i class="fa fa-star-o"></i></h6>
+            <h1>LATEST TRENDS</h1>
+            <p>Here are the latest trends on Web Development.</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/pwa.jpg' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>By Maria Lozhko</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Progressive Web Apps (PWA).</h5>
+                    <p>In 2019, 65% of online shopping orders through the website were made with mobile devices. PWA’s rising website trend makes it possible for users to view their favorite websites on a mobile web browser or desktop and without downloading
+                        special apps or computer programs.</p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/ai.jpg' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>11, Feb 2021</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Artificial Intelligence and Bots</h5>
+                    <p>What does the future of web development look like? That is believed by many that next year bots will become more self-learning and will easily match particular user’s needs and behavior. That means that 24/7-operating bots will be
+                        able to save costs for many companies.
+                    </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-sm-6 col-md-4">
+            <div class="news-item-container">
+                <div class="news-img">
+                    <img src="{% static './img/amp.jpg' %}" alt="news" />
+                    <div class="news-item-date">
+                        <h6><i class="fa fa-calendar"></i>28, Oct 2020</h6>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <h5>Accelerated Mobile Pages (AMP)</h5>
+                    <p>We live in a world of users that are very fond of instant gratification, if not completely hooked on it. So how does that translate into mobile solutions? It’s very simple, a sluggish mobile site will substantially limit your business, because whenever a webpage doesn’t load quickly enough, you easily lose visitors. </p>
+                    <a href="#"><i class="fa fa-paper-plane"></i>VIEW DETAILS</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix visible-lg visible-md visible-sm"></div>
+        <div class="view-all-link">
+            <a href="#"><i class="fa fa-paper-plane"></i>VIEW ALL</a>
+        </div>
+    </div>
+</div>
+
+<!-- STUDENT testimonial section -->
+<div class="row parent-test-row section-row">
+    <div class="container">
+        <div class="section-row-header-center">
+            <h1>WHAT STUDENTS SAY</h1>
+        </div>
+        <div class="owl-carousel" id="parentTestimonial">
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student1.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                    <p><i>"The course was amazing, I learned a ton about web development even going in with a moderate amount of experience. Covers a variety of topics and the websites you create throughout are very fun to build!"</i></p>
+                    <p class="parent-details"><i>ANUSHA</i></p>
+                </div>
+            </div>
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student4.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p>
+                    <p><i>"This course was very informative. I loved the way the professors made us understand the concepts. It was fun creating our own websites."</i></p>
+                    <p class="parent-details"><i>PRANEET</i></p>
+                </div>
+            </div>
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student2.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                    <p><i>"Thank you so much for offering this course. I have really enjoyed creating my own websites."</i></p>
+                    <p class="parent-details"><i>MEHEK</i></p>
+                </div>
+            </div>
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student6.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p>
+                    <p><i>"I appreciate the visual directions those were so helpful in order to understand exactly what and where I needed to click.".</i></p>
+                    <p class="parent-details"><i>AARAV</i></p>
+                </div>
+            </div>
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student5.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                    <p><i>"I have really enjoyed taking this course over the past month. I feel that I have taken the time to look at the different types of technology that we can use."</i></p>
+                    <p class="parent-details"><i>NISHA</i></p>
+                </div>
+            </div>
+            <div class="parent-test-item">
+                <div class="col-sm-3">
+                    <div class="parent-img">
+                        <img src="{% static 'img/parent/student3.png' %}" alt="parent" />
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <p class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></p>
+                    <p><i>"Thank you so much for offering this course. I have been impressed with the help I've received and in a very timely manner.".</i></p>
+                    <p class="parent-details"><i>BHARGAV</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Facts section -->
+<div class="row section-row">
+    <div class="container">
+        <div class="fact-wrapper">
+            <div class="col-md-5 fact-item">
+                <p class="lg-icon"><i class="fa fa-trophy"></i></p>
+                <h1>BEST<br>FACULTY</h1>
+            </div>
+            <div class="col-md-7 fact-item">
+                <div class="fact-item-list">
+                    <div class="col-xs-3">
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>MANY<br>FRAMEWORKS</h2>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="fact-item-list">
+                    <div class="col-xs-3">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>14+<br> WORK HOURS</h2>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="fact-item-list">
+                    <div class="col-xs-3">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>UNPARALLELED LEARNING EXPERIENCE</h2>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Know More Info & Admission apply row -->
+<div class="row apply-know-row">
+    <div class="container">
+        <div class="col-sm-6 admission-row">
+            <h3>ADMISSIONS ARE OPEN</h3>
+            <p>Hurry Up! Don't miss this golden opportunity.</p>
+            <a href="#"><i class="fa fa-edit"></i>APPLY NOW</a>
+        </div>
+        <div class="col-sm-6 info-row">
+            <h3>HAVE ANY QUERIES?</h3>
+            <p>Email Us.</p>
+            <div class="input-wrapper">
+                <input type="text" placeholder="info@kletech.ac.in" /><a href="#"><i class="fa fa-paper-plane"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="row footer-row">
+    <div class="container">
+        <div class="school-logo">
+            <i class="fa fa-graduation-cap"></i>
+            <h3>KLE Technological University</h3>
+            <h6>Creating Value, Leveraging Knowledge.</h6>
+        </div>
+        <div class="col-md-4 col-sm-6 footer-item">
+            <h5>CONTACT US</h5>
+            <p><i class="fa fa-map-marker"></i>B. V. Bhoomaraddi Campus, Vidyanagar, Hubli</p>
+            <p><i class="fa fa-mobile"></i> +91–836–2378300</p>
+            <p><i class="fa fa-envelope"></i>info@kletech.ac.in</p>
+        </div>
+        <div class="col-md-2 col-sm-6 footer-item">
+            <h5>QUICK LINKS</h5>
+            <div class="quick-link-box">
+                <a href="#"><i class="fa fa-graduation-cap"></i>Academics</a>
+                <a href="#"><i class="fa fa-users"></i>Admission</a>
+                <a href="#"><i class="fa fa-calendar"></i>Events</a>
+                <a href="#"><i class="fa fa-thumbs-up"></i>Campus Life</a>
+            </div>
+        </div>
+        <div class="clearfix visible-sm"></div>
+        <div class="col-md-3 col-sm-6 footer-item">
+            <h5>OFFICE TIMINGS</h5>
+            <p><i class="fa fa-clock-o"></i> MON - FRI 10:30AM to 5:00PM</p>
+        </div>
+        <div class="col-md-3 col-sm-6 footer-item">
+            <h5>SUBSCRIBE</h5>
+            <div class="footer-subscribe">
+                <i class="fa fa-envelope"></i></a><input type="text" placeholder="KLE Technological University" />
+            </div>
+            <a href="#" class="subscribe-link"><i class="fa fa-paper-plane"></i>SUBMIT</a>
+        </div>
+    </div>
+    <div class="footer-social-row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+</div>
+
+
+{% endblock %}
